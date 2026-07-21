@@ -1,0 +1,7 @@
+1. git status
+2. git init
+3. git add .
+4. git commit -m "First commit"
+git branch -M main
+git remote add origin https://github.com/MrBeast-OK/FSD_CSE21_Backend.git
+git push -u origin main
