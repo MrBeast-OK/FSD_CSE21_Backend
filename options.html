@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniConnect — Advanced Settings</title>
+    <link rel="stylesheet" href="options.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="icon-circle">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                        <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                        <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                        <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                    </svg>
+                </div>
+                <h1>UniConnect</h1>
+            </div>
+            <p class="subtitle">Advanced Configuration</p>
+        </header>
+
+        <main>
+            <!-- Credentials -->
+            <section class="card glass">
+                <h2>Credentials</h2>
+                <div class="input-group">
+                    <label for="username">Login ID / Username</label>
+                    <input type="text" id="username" placeholder="e.g. 2021BCS001">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="••••••••">
+                </div>
+            </section>
+
+            <!-- Network -->
+            <section class="card glass">
+                <h2>Network Settings</h2>
+                <div class="input-group">
+                    <label for="loginUrl">Captive Portal Login URL</label>
+                    <input type="url" id="loginUrl" placeholder="http://172.16.0.1:8090/httpclient.html">
+                    <small>The full URL of the Wi-Fi login page you get redirected to.</small>
+                </div>
+            </section>
+
+            <!-- Advanced Selectors -->
+            <section class="card glass">
+                <div class="advanced-toggle">
+                    <button id="toggleAdvanced">CSS Selectors (Optional) ▾</button>
+                </div>
+                
+                <div id="advanced" class="hidden">
+                    <p class="helper-text">Only change these if the auto-detection doesn't work on your portal.</p>
+                    <div class="input-group">
+                        <label for="userSelector">Username Input Selector</label>
+                        <input type="text" id="userSelector" placeholder="input[name='username']">
+                    </div>
+                    <div class="input-group">
+                        <label for="passSelector">Password Input Selector</label>
+                        <input type="text" id="passSelector" placeholder="input[type='password']">
+                    </div>
+                    <div class="input-group">
+                        <label for="submitSelector">Submit Button Selector</label>
+                        <input type="text" id="submitSelector" placeholder="button[type='submit']">
+                    </div>
+                </div>
+            </section>
+
+            <div class="actions">
+                <button id="save" class="btn primary">Save Configuration</button>
+                <div id="status" class="status-msg"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>UniConnect v2.0 — Built for seamless campus connectivity.</p>
+        </footer>
+    </div>
+    <script src="options.js"></script>
+</body>
+</html>
